@@ -3,7 +3,7 @@
 <h1 align="center">Management Panel</h1>
 
 
-![demo](https://github.com/Ela-Fhd/RickAndMorthy/blob/main/public/demo/demo.png)
+![demo](https://github.com/Ela-Fhd/Management-Panel/blob/main/img/demo.png)
 
   - &#128204;<a href="http://elahe.uno/panel" >Demo</a>
   - 🙋‍♀️Developed by Elahe Fahmideh
