@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootsrap Css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- main Css -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- popper js -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!-- bootsrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- jquery -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- chart js -->
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <!-- circle progress plugin -->
+    <script src="node_modules/jquery-circle-progress/dist/circle-progress.js"></script>
+    <!-- sweet alert 2 js -->
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <!-- sweet alert 2 css -->
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <!-- calendar css -->
+    <link rel="stylesheet" href="node_modules/flatpickr-persian/dist/flatpickr.min.css">
+    <!-- calendar js -->
+    <script src="node_modules/flatpickr-persian/dist/flatpickr.min.js"></script>
+    <script src="node_modules/flatpickr-persian/dist/l10n/fa.js"></script>
+    <!-- <script src="node_modules/flatpickr-persian/dist/themes/material_blue.css"></script> -->
+    <!-- select 2  -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- apex chart css -->
+    <link rel="stylesheet" href="node_modules/apexcharts/dist/apexcharts.css">
+    <!-- apex chart js -->
+    <script src="node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="FontAwesome.Pro.6.3.0/css/all.css">
+    <!-- main Js -->
+    <script async defer src="Js/script.js"></script>
+    <title>Panel</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- menue start -->
+        <div class="menue toggle custom-scroll">
+
+            <div class="menue-header d-flex justify-content-between align-items-center py-2 px-3">
+
+                <span class="logo">
+                    <ion-icon name="person-outline"></ion-icon>
+                </span>
+
+
+                <div class="open-close">
+                    <ion-icon name="ellipse-outline"></ion-icon>
+                    <span></span>
+                </div>
+
+                <div class="close-menue">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+
+            </div>
+
+
+            <ul class="p-0">
+                <li class="mt-3 active d-flex align-items-center justify-content-start"">
+                <span class=" mx-3">
+                    <ion-icon name="desktop-outline"></ion-icon>
+                    </span>
+                    <a href="?dashboard">داشبورد</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </span>
+                    <a href="?client">مشتریان</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </span>
+                    <a href="?document">اسناد و مدارک</a>
+                </li>
+
+                <li class="disabled">
+                    <a href="" class="mx-2">تیم ها و پروژه ها </a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="document-outline"></ion-icon>
+                    </span>
+                    <a href="?project">پروژه ها</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="cafe-outline"></ion-icon>
+                    </span>
+                    <a href="?team">تیم ها</a>
+                </li>
+
+                <li class="disabled">
+                    <a href="" class="mx-2">مالی و حسابداری</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </span>
+                    <a href="?cost">هزینه ها</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </span>
+                    <a href="?facture">پیش فاکتور ها</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </span>
+                    <a href="?invoice">صورت حساب ها</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </span>
+                    <a href="?payment">پرداخت ها</a>
+                </li>
+
+                <li class="disabled">
+                    <a href="" class="mx-2">تنظیمات</a>
+                </li>
+
+                <li class="d-flex align-items-center justify-content-start">
+                    <span class="mx-3">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <a href="?setting">تنظیمات</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- menue end -->
+
+
+        <div class="overlay"></div>
+
+
+        <!-- main information start -->
+        <div class="information toggleInfoLG">
+
+            <div class="container-fluid">
+
+                <!-- content-header start -->
+                <div class="row">
+                    <div class="col-12 content-header d-flex justify-content-between mt-2">
+
+                        <!-- menue btn start -->
+                        <div class="open-menue">
+                            <ion-icon name="apps-outline"></ion-icon>
+                        </div>
+                        <!-- menue btn start -->
+
+
+
+                        <!-- Searchbox start -->
+                        <div class="search-box">
+                            <ion-icon name="search-outline"></ion-icon>
+                            <input type="text" class="search" placeholder="جستجو کنید...">
+                            <button type="button" class="close-btn">&times;</button>
+                        </div>
+                        <!-- Searchbox start -->
+
+
+                        <!-- content user start -->
+                        <div class="content-user d-flex align-items-center">
+
+
+                            <div class="flag">
+                                <img src="img/flag.jpg" alt="flag" class="img-fluid">
+                            </div>
+
+                            <div class="massage">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <span class="badge bg-success"><small>1</small></span>
+                            </div>
+
+                            <div class="notfication">
+                                <ion-icon name="notifications-outline"></ion-icon>
+                                <span class="badge bg-danger"><small>1</small></span>
+                            </div>
+
+                            <div class="profile">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+
+                            <div class="dark-mode">
+                                <ion-icon name="moon-outline"></ion-icon>
+                                <!-- <ion-icon name="sunny-outline"></ion-icon> -->
+                            </div>
+
+
+
+                        </div>
+                        <!-- content user end -->
+
+                    </div>
+                </div>
+                <!-- content-header end -->
+
+
+                <!-- content body start -->
+                <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 dashboard">
+
+                    <!-- dashboard item start -->
+                    <div class="col-12">
+                        <div class="row">
+
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 px-lg-4 px-md-4 px-3 py-3">
+                                <div class="row dashboard-item p-2">
+
+                                    <div class="col-6">
+                                        <p><strong class="text-nowrap">مجموع صورت حساب ها</strong></p>
+                                        <p class="text-info"><strong>0</strong></p>
+                                        <p class="text-muted">مورد</p>
+                                    </div>
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <ion-icon class="avatar text-info" name="reader-outline"></ion-icon>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 px-lg-4 px-md-4 px-3 py-3">
+                                <div class="row dashboard-item p-2">
+
+                                    <div class="col-6">
+                                        <p><strong class="text-nowrap">مجموع پروژه ها</strong></p>
+                                        <p class="text-info"><strong>6</strong></p>
+                                        <p class="text-muted">مورد</p>
+                                    </div>
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <ion-icon class="avatar text-danger" name="newspaper-outline"></ion-icon>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 px-lg-4 px-md-4 px-3 py-3">
+                                <div class="row dashboard-item p-2">
+
+                                    <div class="col-6">
+                                        <p><strong class="text-nowrap">مجموع پرداختی ها</strong></p>
+                                        <p class="text-info"><strong>0</strong></p>
+                                        <p class="text-muted">مورد</p>
+                                    </div>
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <ion-icon class="avatar text-success" name="wallet-outline"></ion-icon>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 px-lg-4 px-md-4 px-3 py-3">
+                                <div class="row dashboard-item p-2">
+
+                                    <div class="col-6">
+                                        <p><strong class="text-nowrap">مجموع مشتریان</strong></p>
+                                        <p class="text-info"><strong>1</strong></p>
+                                        <p class="text-muted">مورد</p>
+                                    </div>
+
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <ion-icon class="avatar text-primary" name="people-outline"></ion-icon>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- dashboard item end -->
+
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 content-container px-md-3 py-sm-2">
+                                <div class="card h-100 p-2">
+
+                                    <!-- header start -->
+
+                                    <div class="header mt-2 d-flex justify-content-between">
+                                        <span>تجزیه و تحلیل وب‌سایت</span>
+
+                                        <div class="menue-dropdown position-relative">
+
+                                            <div class="dropdown-icon">
+                                                <ion-icon name="ellipsis-vertical-outline" class="mx-auto"></ion-icon>
+                                            </div>
+
+                                            <div class="menue-items d-flex flex-column position-absolute">
+                                                <a href="#">انتخاب همه</a>
+                                                <a href="#">تازه سازی</a>
+                                                <a href="#">اشتراک گذاری</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- header end -->
+
+                                    <div class="body-card mt-4 ">
+
+                                        <div class="row d-flex justify-content-between mb-4">
+
+                                            <div
+                                                class="col-12 col-sm-12 col-md-4 d-flex my-2 my-md-0 align-items-center justify-content-center users body-item">
+
+                                                <div class="d-flex align-items-center mt-2">
+                                                    <ion-icon name="person-outline"></ion-icon>
+                                                    <span class="mx-2">کاربران</span>
+                                                </div>
+
+                                                <div class="range mt-3 d-flex align-items-center">
+                                                    <div class="spinner-border text-success"></div>
+                                                    <span class="mx-2">61k</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div
+                                                class="col-12 col-sm-12 col-md-4 d-flex my-2 my-md-0 align-items-center justify-content-center sessions body-item">
+
+                                                <div class="d-flex align-items-center mt-2">
+                                                    <ion-icon name="pie-chart-outline"></ion-icon>
+                                                    <span class="mx-2">جلسات</span>
+                                                </div>
+
+                                                <div class="range mt-3 d-flex align-items-center">
+                                                    <div class="spinner-border text-warning"></div>
+                                                    <span class="mx-2">92k</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div
+                                                class="col-12 col-sm-12 col-md-4 d-flex my-2 my-md-0 align-items-center justify-content-center rate body-item">
+
+                                                <div class="d-flex align-items-center mt-2">
+                                                    <ion-icon name="trending-up-outline"></ion-icon>
+                                                    <span class="mx-2">نوسان</span>
+                                                </div>
+
+                                                <div class="range mt-3 d-flex align-items-center">
+                                                    <div class="spinner-border text-danger"></div>
+                                                    <span class="mx-2">72%</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="chart d-flex justify-content-center align-items-center ">
+                                            <canvas id="Website_analysis_chart"></canvas>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12 content-container">
+
+                                <div class="row d-flex justify-content-around">
+
+                                    <!-- box1 start -->
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 py-2 px-3">
+                                        <div class="annual_growth  h-100">
+
+                                            <div class="d-flex flex-column align-items-center">
+
+                                                <div class="text-center mt-1">
+                                                    <div class="menue-dropdown position-relative">
+
+                                                        <div class="dropdown-icon">
+                                                            <button
+                                                                class="btn btn-sm btn btn-outline-secondary growth_btn">
+                                                                <span>1401</span>
+                                                                <ion-icon name="chevron-down-outline"></ion-icon>
+                                                            </button>
+                                                        </div>
+
+                                                        <div class="menue-items d-flex flex-column position-absolute">
+                                                            <a href="#">1399</a>
+                                                            <a href="#">1400</a>
+                                                            <a href="#">1401</a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div id="grow" class="mt-4"></div>
+                                                <p class="mt-3 text-muted"><strong>62% رشد در سال 1401</strong></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- box1 end -->
+
+
+                                    <!-- box2 start -->
+                                    <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 py-2 px-3">
+                                        <div class="Registration-number  h-100">
+                                            <span>تعداد ثبت نامی ها</span>
+
+                                            <div class=" d-flex justify-content-center mt-2">
+
+                                                <div class="chart d-flex justify-content-center align-items-center">
+                                                    <canvas id="Registration_number_chart" width="200"
+                                                        height="50"></canvas>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- box2 end -->
+
+
+                                    <!-- box3 start -->
+                                    <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 py-2 px-3">
+
+                                        <div class="profit-report  h-100">
+                                            <span>گزارش سود</span>
+
+                                            <div class="d-flex justify-content-around mt-5">
+
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="spinner-border text-danger mx-2"></div>
+                                                        <span>12k تومان</span>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-1">1400</p>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <div class="spinner-border text-success mx-2"></div>
+                                                        <span>64k تومان</span>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-2">1401</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- box3 end -->
+
+                                    <!-- box4 start -->
+                                    <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 py-2 px-3">
+
+                                        <div class="income-sells h-100">
+                                            <div class="income d-flex justify-content-center align-items-center">
+                                                <span class="avatar">$</span>
+                                                <span class="income-value mx-2"><strong>50,000</strong></span>
+                                                <span class="text-muted"><small class="mx-1">درآمد</small></span>
+                                            </div>
+
+                                            <div
+                                                class="income-chart mt-1 mt-sm-3 mt-md-2 d-flex align-items-center justify-content-center">
+                                                <canvas id="income-chart" width="200" height="50"></canvas>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- box4 end -->
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 px-3 py-2 content-container">
+                        <div class="row">
+
+
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 py-2">
+                                <div class="card p-4 pb-0">
+
+                                    <div class="row" style="overflow-x: auto;">
+
+                                        <div
+                                            class="col-12 d-flex justify-content-start header_table header_task_table px-2">
+                                            <span>پروژه ها</span>
+                                        </div>
+
+                                        <div class="col-12 d-flex justify-content-start my-3">
+                                            <div class="search_table search-task">
+                                                <span>
+                                                    <ion-icon name="search-outline"></ion-icon>
+                                                </span>
+                                                <input type="text" placeholder="جستجو ...">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 body_table task_table">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr class="text-muted">
+                                                        <th>
+                                                            <ion-icon name="remove-outline"></ion-icon>
+                                                        </th>
+                                                        <th>ردیف</th>
+                                                        <th>نام پروژه</th>
+                                                        <th>مقدار انجام شده</th>
+                                                        <th>تاریخ شروع</th>
+                                                        <th>تاریخ ایجاد</th>
+                                                        <th>فرد ایجاد کننده</th>
+                                                        <th>وضیعت</th>
+                                                        <th>عملیات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td><span>1</span></td>
+                                                        <td><span>project 1</span></td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                                                    role="progressbar" style="width: 70%;"
+                                                                    aria-valuemin="0" aria-valuemax="100">70%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>admin</td>
+                                                        <td>
+                                                            <span class="badge bg-warning text-light">در حال
+                                                                انجام</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>project 2</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger "
+                                                                    role="progressbar" style="width: 20%;"
+                                                                    aria-valuemin="0" aria-valuemax="100">20%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>admin</td>
+                                                        <td>
+                                                            <span class="badge bg-warning text-light">در حال
+                                                                انجام</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>3</td>
+                                                        <td>project 3</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success "
+                                                                    role="progressbar" style="width: 100%;"
+                                                                    aria-valuemin="0" aria-valuemax="100">100%</div>
+                                                            </div>
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>admin</td>
+                                                        <td>
+                                                            <span class="badge text-light"
+                                                                style="background-color: #28a745;">انجام شده</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>4</td>
+                                                        <td>project 4</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info "
+                                                                    role="progressbar" style="width: 50%;"
+                                                                    aria-valuemin="0" aria-valuemax="100">50 % </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>admin</td>
+                                                        <td>
+                                                            <span class="badge bg-warning text-light">در حال
+                                                                انجام</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>5</td>
+                                                        <td>project 5</td>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                                                    role="progressbar" style="width: 30%;"
+                                                                    aria-valuemin="0" aria-valuemax="100">30 % </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>admin</td>
+                                                        <td>
+                                                            <span class="badge bg-warning text-light">در حال
+                                                                انجام</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 py-2">
+                                <div class="card p-4 pb-0">
+
+                                    <div class="row" style="overflow-x: auto;">
+
+                                        <div
+                                            class="col-12 d-flex justify-content-start header_table header_invoice_table px-2">
+                                            <span>صورت حساب ها </span>
+                                        </div>
+
+                                        <div class="col-12 d-flex justify-content-start my-3">
+                                            <div class="search_table search-invoice">
+                                                <span>
+                                                    <ion-icon name="search-outline"></ion-icon>
+                                                </span>
+                                                <input type="text" placeholder="جستجو ...">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 body_table invoice_table">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr class="text-muted">
+                                                        <th>
+                                                            <ion-icon name="remove-outline"></ion-icon>
+                                                        </th>
+                                                        <th>ردیف</th>
+                                                        <th>نام مشتری</th>
+                                                        <th>مبلغ</th>
+                                                        <th>تاریخ پرداخت</th>
+                                                        <th>تاریخ صدور فیش</th>
+                                                        <th>وضیعت</th>
+                                                        <th>عملیات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td><span>1</span></td>
+                                                        <td><span>user 1</span></td>
+                                                        <td class="sum">
+                                                            400000
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>
+                                                            <span class="badge bg-success text-light">پرداخت شده</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>2</td>
+                                                        <td>user 2</td>
+                                                        <td class="sum">
+                                                            500000
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>
+                                                            <span class="badge bg-danger text-light">پرداخت نشده</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>3</td>
+                                                        <td>user 3</td>
+                                                        <td class="sum">
+                                                            600000
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>
+                                                            <span class="badge bg-success text-light">پرداخت شده</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>4</td>
+                                                        <td>user 4</td>
+                                                        <td class="sum">
+                                                            700000
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>
+                                                            <span class="badge bg-danger text-light">پرداخت نشده</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>5</td>
+                                                        <td>user 5</td>
+                                                        <td class="sum">
+                                                            800000
+                                                        </td>
+                                                        <td>1401/11/29</td>
+                                                        <td>1401/10/29</td>
+                                                        <td>
+                                                            <span class="badge bg-success text-light">پرداخت شده</span>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                            <i
+                                                                class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- content body end -->
+
+                <!-- content body start -->
+                <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 client">
+
+                    <div class="col-12 px-3 py-2">
+                        <div class="row ">
+
+                            <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 py-2 mx-auto">
+                                <div class="card p-4 pb-0" style="overflow-x: auto;">
+
+                                    <div class="row">
+
+                                        <!-- table header start -->
+                                        <div class="col-12 d-flex justify-content-start header_table px-2">
+                                            <span>فهرست مشتریان</span>
+                                        </div>
+
+                                        <div class="col-12 my-3">
+                                            <div class="row"">
+
+                                                <div
+                                                    class=" col-12 col-sm-6 d-flex justify-content-center
+                                                justify-content-sm-start">
+                                                <div class="search_table">
+                                                    <span>
+                                                        <ion-icon name="search-outline"></ion-icon>
+                                                    </span>
+                                                    <input type="text" placeholder="جستجو ...">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="col-12 col-sm-6 my-3 my-sm-0 d-flex justify-content-center justify-content-sm-end">
+                                                <div class="add_client">
+                                                    <div class="btn text-light " data-bs-toggle="modal"
+                                                        data-bs-target="#new_client">ثبت مشتری جدید</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- new client modal start -->
+                                            <div class="modal custom-modal modal-xl fade" id="new_client" tabindex="-1"
+                                                aria-hidden="true">
+                                                <div
+                                                    class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+
+                                                        <div class="modal-header d-flex justify-content-between">
+                                                            <span class="modal-title">ثبت مشتری جدید</span>
+                                                            <div data-bs-dismiss="modal">&times;</div>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <form action="">
+                                                                        <div class="row p-3">
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+
+                                                                                <label for="client_type"
+                                                                                    class="form-label mx-1">نوع
+                                                                                    مشتری</label>
+                                                                                <select name="" id="client_type">
+                                                                                    <option selected>انتخاب کنید
+                                                                                    </option>
+                                                                                    <option value="1">حقیقی</option>
+                                                                                    <option value="2">حقوقی</option>
+                                                                                    <select>
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="company_name"
+                                                                                    class="form-label mx-1">نام
+                                                                                    شرکت</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="company_name">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="phone"
+                                                                                    class="form-label mx-1">شماره
+                                                                                    تماس</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="phone">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="email"
+                                                                                    class="form-label mx-1">پست
+                                                                                    الکترونیک</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="email">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="state"
+                                                                                    class="form-label  mx-1">استان</label>
+                                                                                <select class="form-select" id="state">
+                                                                                    <option selected>انتخاب کنید
+                                                                                    </option>
+                                                                                    <option value="1">آذربایجان شرقی
+                                                                                    </option>
+                                                                                    <option value="2">آذربایجان غربی
+                                                                                    </option>
+                                                                                    <option value="3">اردبیل
+                                                                                    </option>
+                                                                                    <option value="4">اصفهان
+                                                                                    </option>
+                                                                                    <option value="5">البرز</option>
+                                                                                    <option value="6">ایلام</option>
+                                                                                    <option value="7">بوشهر</option>
+                                                                                    <option value="8">تهران</option>
+                                                                                    <option value="9">چهارمحال و
+                                                                                        بختیاری</option>
+                                                                                    <option value="10">بوشهر
+                                                                                    </option>
+                                                                                    <option value="11">خراسان جنوبی
+                                                                                    </option>
+                                                                                    <option value="12">خراسان رضوی
+                                                                                    </option>
+                                                                                    <option value="13">خراسان شمالی
+                                                                                    </option>
+                                                                                    <option value="14">خوزستان
+                                                                                    </option>
+                                                                                    <option value="15">زنجان
+                                                                                    </option>
+                                                                                    <option value="16">سمنان
+                                                                                    </option>
+                                                                                    <option value="17">سیستان و
+                                                                                        بلوچستان</option>
+                                                                                    <option value="18">فارس
+                                                                                    </option>
+                                                                                    <option value="19">قزوین
+                                                                                    </option>
+                                                                                    <option value="20">قم </option>
+                                                                                    <option value="21">کردستان
+                                                                                    </option>
+                                                                                    <option value="22">کرمان
+                                                                                    </option>
+                                                                                    <option value="23">کرمانشاه
+                                                                                    </option>
+                                                                                    <option value="24">کهگیلویه و
+                                                                                        بویراحمد</option>
+                                                                                    <option value="25">گلستان
+                                                                                    </option>
+                                                                                    <option value="26">گیلان
+                                                                                    </option>
+                                                                                    <option value="27">لرستان
+                                                                                    </option>
+                                                                                    <option value="28">مازندران
+                                                                                    </option>
+                                                                                    <option value="29">مرکزی
+                                                                                    </option>
+                                                                                    <option value="30">هرمزگان
+                                                                                    </option>
+                                                                                    <option value="21">همدان
+                                                                                    </option>
+                                                                                    <option value="32">یزد</option>
+
+
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="city"
+                                                                                    class="form-label mx-1">شهر</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="city">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="postal_code"
+                                                                                    class="form-label mx-1">کد
+                                                                                    پستی</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="postal_code">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="national_id"
+                                                                                    class="form-label mx-1">کد ملی /
+                                                                                    شناسه ملی</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="national_id">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="registration_number"
+                                                                                    class="form-label mx-1">شماره
+                                                                                    شناسنامه / شناسه ثبت</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="registration_number">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="Economic_code"
+                                                                                    class="form-label mx-1">کد
+                                                                                    اقتصادی</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="Economic_code">
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <div class="btn btn-danger text-light"
+                                                                data-bs-dismiss="modal">بستن</div>
+                                                            <div class="btn text-light" newclient-save="save">ثبت
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- new client modal end -->
+
+                                        </div>
+                                    </div>
+                                    <!-- table header end -->
+
+
+                                    <!-- table body start -->
+                                    <div class="col-12 body_table">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="text-muted">
+                                                    <th>
+                                                        <ion-icon name="remove-outline"></ion-icon>
+                                                    </th>
+                                                    <th>ردیف</th>
+                                                    <th>عنوان</th>
+                                                    <th>نام مشتری</th>
+                                                    <th>نوع مشتری</th>
+                                                    <th>شهر</th>
+                                                    <th>استان</th>
+                                                    <th>تاریخ ایجاد</th>
+                                                    <th>عملیات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox">
+                                                    </td>
+                                                    <td><span>1</span></td>
+                                                    <td><span>مشتری 1</span></td>
+                                                    <td>الهه</td>
+                                                    <td>حقیقی</td>
+                                                    <td>تهران</td>
+                                                    <td>تهران</td>
+                                                    <td>1401/12/02</td>
+                                                    <td>
+                                                        <i class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                        <i class="fa-regular fa-pen-to-square edit table-operation-icon"
+                                                            data-bs-toggle="modal" data-bs-target="#edit_client"></i>
+                                                        <a href="?operations">
+                                                            <i class="fa-solid fa-plus more table-operation-icon"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox">
+                                                    </td>
+                                                    <td><span>2</span></td>
+                                                    <td><span>مشتری 2</span></td>
+                                                    <td>الهام</td>
+                                                    <td>حقوقی</td>
+                                                    <td>تهران</td>
+                                                    <td>تهران</td>
+                                                    <td>1401/12/02</td>
+                                                    <td>
+                                                        <i class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                        <i class="fa-regular fa-pen-to-square edit table-operation-icon"
+                                                            data-bs-toggle="modal" data-bs-target="#edit_client"></i>
+                                                        <a href="?operations">
+                                                            <i class="fa-solid fa-plus more table-operation-icon"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+
+                                            <!-- edit client modal start -->
+                                            <div class="modal custom-modal modal-xl fade" id="edit_client" tabindex="-1"
+                                                aria-hidden="true">
+                                                <div
+                                                    class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+
+                                                        <div class="modal-header d-flex justify-content-between">
+                                                            <span class="modal-title">ویرایش اطلاعات</span>
+                                                            <div data-bs-dismiss="modal">&times;</div>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <form action="">
+                                                                        <div class="row p-3">
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="title_client"
+                                                                                    class="form-label mx-1">عنوان</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="title_client">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="client_name"
+                                                                                    class="form-label mx-1">نام
+                                                                                    مشتری</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="client_name">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="cleint_type"
+                                                                                    class="form-label mx-1">نوع
+                                                                                    مشتری</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="cleint_type">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="client_city"
+                                                                                    class="form-label mx-1">شهر</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="client_city">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="client_state"
+                                                                                    class="form-label mx-1">استان</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="client_state">
+                                                                            </div>
+
+                                                                            <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                                <label for="client_creation_date"
+                                                                                    class="form-label mx-1">تاریخ
+                                                                                    ایجاد</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="client_creation_date">
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <div class="btn btn-danger text-light"
+                                                                data-bs-dismiss="modal">بستن</div>
+                                                            <div class="btn text-light" client-edit="edit">ثبت
+                                                                تغییرات</div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- edit client modal end -->
+
+                                        </table>
+                                    </div>
+                                    <!-- table body end -->
+
+
+                                    <!-- table footer start -->
+                                    <div class="col-12 table_footer mt-2 mx-5 mx-md-0">
+                                        <div class="row">
+                                            <div
+                                                class="col-md-6 col-sm-12 col-12 d-flex justify-content-center justify-content-md-start align-items-center">
+                                                <div class="table_pagination">
+                                                    <ul class="d-flex d-inline">
+                                                        <li class="p-2 prev">
+                                                            <ion-icon name="caret-forward-outline"></ion-icon>
+                                                        </li>
+                                                        <li class="active-page p-2">1</li>
+                                                        <li class="p-2">2</li>
+                                                        <li class="p-2">3</li>
+                                                        <li class="p-2">4</li>
+                                                        <li class="p-2">5</li>
+                                                        <li class="p-2 next">
+                                                            <ion-icon name="caret-back-outline"></ion-icon>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-end justify-content-center align-items-center">
+                                                <span class="pagination_text">
+                                                    <small class="text-muted">صفحه 1 از 5</small>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- table footer end -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- content body end -->
+
+
+            <!-- content body start -->
+            <div class="row content-body px-0 px-sm-2 px-xl-2 px-lg-2 operations">
+
+                <div class="col-12 px-3 py-2">
+                    <div class="row">
+
+                        <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 py-2 information-card">
+                            <div class="card personal-info-card mt-5 mt-sm-0 p-3 pb-4">
+                                <div class="d-flex flex-column align-items-center">
+
+                                    <img class=" personal-info-img"
+                                        src="http://www.designstub.com/demos/onepageresume/assets/images/my-pic.jpg"
+                                        alt="">
+
+
+                                    <div class="w-100 text-center personal-info-items-box">
+
+                                        <div class="d-flex flex-column personal-info-items personal-items-1">
+                                            <strong class="mt-3 personal-info-name">مشتری </strong>
+                                            <span class="mt-1 personal-info-item">حقوقی</span>
+                                        </div>
+
+                                        <hr class="w-75 mx-auto divider" />
+
+                                        <div class="d-flex flex-column personal-info-items personal-items-2">
+                                            <span dir="rtl" class="mt-2"><i class="fa fa-phone ms-2"></i>
+                                                09307575598
+                                            </span>
+                                            <span dir="rtl" class="mt-1"><i class="fa fa-envelope ms-2"></i>
+                                                elahe.fahmideh@gmail.com
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+                                    <span dir="rtl" style="text-align: justify;"
+                                        class="my-1 direction-rtl w-75 personal-info-address"><i
+                                            class="fa fa-map-marker ms-2"></i>
+                                        ایران - تهران - محله اراج - کارخانه نوآوری های وی                                  </span>
+                                    <hr class="w-75" />
+
+                                    <div class="col-12 col-sm-11 pt-2">
+                                        <div class="row personal-info-buttons">
+
+                                            <div class="col-4 p-1 personal-info-button">
+                                                <div class="btn btn-orange d-flex justify-content-center w-100">
+                                                    <i class="fa fa-edit ms-2 my-auto"></i> ویرایش
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4 p-1 personal-info-button">
+                                                <div class="btn btn-orange d-flex justify-content-center w-100">
+                                                    <i class="fa fa-edit ms-2 my-auto"></i> ویرایش
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4 p-1 personal-info-button">
+                                                <div class="btn btn-orange d-flex justify-content-center w-100">
+                                                    <i class="fa fa-edit ms-2 my-auto"></i>
+                                                    ویرایش
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4 p-1 personal-info-button">
+                                                <div class="btn btn-blue d-flex justify-content-center w-100">
+                                                    <i class="fa fa-edit ms-2 my-auto"></i> ویرایش
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4 p-1 personal-info-button">
+                                                <div class="btn btn-blue d-flex justify-content-center w-100">
+                                                    <i class="fa fa-edit ms-2 my-auto"></i> ویرایش
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4 p-1 personal-info-button">
+                                                <div class="btn btn-blue d-flex justify-content-center w-100">
+                                                    <i class="fa fa-edit ms-2 my-auto"></i>
+                                                    ویرایش
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 py-2 mx-auto content-card">
+                            <div class="card ">
+
+                                <div class="row">
+
+                                    <!--  header start -->
+                                    <div class="col-12 d-flex justify-content-start header_table px-3">
+                                        <span>فهرست</span>
+                                    </div>
+
+                                    <!-- <div class="col-12 my-3"> 
+                                                <div class="row">
+
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-12 my-1 my-md-0 d-flex justify-content-start">
+                                                        <div class="search_table">
+                                                            <span>
+                                                                <ion-icon name="search-outline"></ion-icon>
+                                                            </span>
+                                                            <input type="text" placeholder="جستجو ...">
+                                                        </div>
+                                                    </div>
+                                                </div>                                                               
+                                            </div> -->
+                                    <!-- header end -->
+
+                                    <!-- content start -->
+                                    <div class="col-12 mt-4 p-0">
+
+                                        <div class='tabbed round' style="overflow-x: hidden;">
+
+                                            <ul class="tab-container">
+                                                <li class="tab-item active-tab" id="tab-1">گزارشات</li>
+                                                <li class="tab-item" id="tab-2">پروژه ها</li>
+                                                <li class="tab-item" id="tab-3">صورت حساب ها</li>
+                                                <li class="tab-item" id="tab-4">تماس ها</li>
+                                                <li class="tab-item" id="tab-5">جلسات</li>
+                                                <li class="tab-item" id="tab-6">رابطین</li>
+                                                <li class="tab-item" id="tab-6">تاریخچه فعالیت ها</li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="tab-content-wrapper">
+
+
+                                            <!-- content tab 1 -->
+                                            <div class="tab-content content-tab-active custom-scroll"
+                                                id="content-tab-1">
+                                                <div class="card p-1 benefit-chart-card">
+
+                                                    <h5 class="cost-benefit-text-chart my-3">سود و زیان</h5>
+
+                                                    <div id="cost-benefit-chart"></div>
+
+                                                </div>
+                                            </div>
+                                            <!-- content tab 1 -->
+
+                                            <!-- content tab 2 -->
+                                            <div class="tab-content" id="content-tab-2">
+
+                                                <!-- table body start -->
+                                                <div class="col-12 body_table">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr class="text-muted">
+                                                                <th><ion-icon name="remove-outline"></ion-icon></th>
+                                                                <th>ردیف</th>
+                                                                <th>عنوان</th>
+                                                                <th>تیم</th>
+                                                                <th>تاریخ شروع</th>
+                                                                <th>تاریخ ایجاد</th>
+                                                                <th>عملیات</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>1</span></td>
+                                                                <td>پروژه 1</td>
+                                                                <td>تیم 3</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>2</span></td>
+                                                                <td>پروژه 2</td>
+                                                                <td>تیم 5</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>3</span></td>
+                                                                <td>پروژه 3</td>
+                                                                <td>تیم 4</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>4</span></td>
+                                                                <td>پروژه 4</td>
+                                                                <td>تیم 2</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>5</span></td>
+                                                                <td>پروژه 5</td>
+                                                                <td>تیم 2</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>6</span></td>
+                                                                <td>پروژه 6</td>
+                                                                <td>تیم 3</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>6</span></td>
+                                                                <td>پروژه 6</td>
+                                                                <td>تیم 3</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>6</span></td>
+                                                                <td>پروژه 6</td>
+                                                                <td>تیم 3</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>6</span></td>
+                                                                <td>پروژه 6</td>
+                                                                <td>تیم 3</td>
+                                                                <td>1401/12/13</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- table body end -->
+
+                                            </div>
+                                            <!-- content tab 2 -->
+
+                                            <!-- content tab 3 -->
+                                            <div class="tab-content" id="content-tab-3">
+
+                                                <!-- table body start -->
+                                                <div class="col-12 body_table">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr class="text-muted">
+                                                                <th><ion-icon name="remove-outline"></ion-icon></th>
+                                                                <th>ردیف</th>
+                                                                <th>شماره</th>
+                                                                <th>مشتری</th>
+                                                                <th>مبلغ</th>
+                                                                <th>وضیعت</th>
+                                                                <th>ایجاد کننده</th>
+                                                                <th>تاریخ ایجاد</th>
+                                                                <th>عملیات</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>1</span></td>
+                                                                <td>23</td>
+                                                                <td>مشتری</td>
+                                                                <td>420000</td>
+                                                                <td><span class="badge bg-danger">تایید نشده</span>
+                                                                </td>
+                                                                <td>الهه</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>2</span></td>
+                                                                <td>25</td>
+                                                                <td>مشتری</td>
+                                                                <td>560000</td>
+                                                                <td><span class="badge bg-success">تایید شده</span>
+                                                                </td>
+                                                                <td>الهه</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>3</span></td>
+                                                                <td>20</td>
+                                                                <td>مشتری</td>
+                                                                <td>670000</td>
+                                                                <td><span class="badge bg-warning">در انتظار
+                                                                        تایید</span></td>
+                                                                <td>الهه</td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- table body end -->
+
+                                            </div>
+                                            <!-- content tab 3 -->
+
+                                            <!-- content tab 4 -->
+                                            <div class="tab-content" id="content-tab-4">
+                                                <!-- table body start -->
+                                                <div class="col-12 body_table">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr class="text-muted">
+                                                                <th><ion-icon name="remove-outline"></ion-icon></th>
+                                                                <th>ردیف</th>
+                                                                <th>شماره</th>
+                                                                <th>نام</th>
+                                                                <th>زمان تماس</th>
+                                                                <th>وضیعت</th>
+                                                                <th>تاریخ تماس</th>
+                                                                <th>عملیات</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>1</span></td>
+                                                                <td>09307575598</td>
+                                                                <td>الهه</td>
+                                                                <td>14:20</td>
+                                                                <td><span class="badge bg-danger">پاسخ داده
+                                                                        نشده</span></td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="checkbox">
+                                                                </td>
+                                                                <td><span>2</span></td>
+                                                                <td>09307575598</td>
+                                                                <td>الهه</td>
+                                                                <td>14:25</td>
+                                                                <td><span class="badge bg-success">پاسخ داده
+                                                                        شده</span></td>
+                                                                <td>1401/12/14</td>
+                                                                <td>
+                                                                    <i
+                                                                        class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                                    <i
+                                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- table body end -->
+                                            </div>
+                                            <!-- content tab 4 -->
+
+                                            <!-- content tab 5 -->
+                                            <div class="tab-content" id="content-tab-5">
+                                                <h2>content5</h2>
+                                            </div>
+                                            <!-- content tab 5 -->
+
+                                            <!-- content tab 6 -->
+                                            <div class="tab-content" id="content-tab-6">
+                                                <h2>content6</h2>
+                                            </div>
+                                            <!-- content tab 6 -->
+
+
+                                        </div>
+
+
+                                    </div>
+                                    <!-- content start -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- content body end -->
+
+
+            <!-- content body start -->
+            <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 document">
+
+                <div class="col-12 px-3 py-2">
+                    <div class="row">
+
+                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 py-2 mx-auto">
+                            <div class="card p-4 pb-0" style="overflow-x: auto;">
+
+                                <div class="row">
+
+                                    <!-- table header start -->
+                                    <div class="col-12 d-flex justify-content-start header_table px-2">
+                                        <span>اسناد و مدارک</span>
+                                    </div>
+
+                                    <div class="col-12 my-3">
+                                        <div class="row">
+
+                                            <div
+                                                class="col-12 col-sm-6  d-flex justify-content-center justify-content-sm-start">
+                                                <div class="search_table">
+                                                    <span>
+                                                        <ion-icon name="search-outline"></ion-icon>
+                                                    </span>
+                                                    <input type="text" placeholder="جستجو ...">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="col-12 col-sm-6 my-3 my-sm-0 d-flex justify-content-center justify-content-sm-end">
+                                                <input type="text" class="form-control calendar w-50">
+                                                <span class="input-group-text calendar_prepend">
+                                                    <i class="fa-light fa-calendar-days calendar-icon"></i>
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- table header end -->
+
+
+                                <!-- table body start -->
+                                <div class="col-12 body_table">
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="text-muted">
+                                                <th>
+                                                    <ion-icon name="remove-outline"></ion-icon>
+                                                </th>
+                                                <th>ردیف</th>
+                                                <th>دانلود</th>
+                                                <th>مشاهده</th>
+                                                <th>شماره</th>
+                                                <th>عنوان</th>
+                                                <th>طبقه فایل</th>
+                                                <th>ایجاد کننده</th>
+                                                <th>تاریخ ایجاد</th>
+                                                <th>عملیات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td><span>1</span></td>
+                                                <td><span><i
+                                                            class="fa-regular fa-down-to-bracket download-doc mt-1"></i></span>
+                                                </td>
+                                                <td><i class="fa-regular fa-eye view-doc mt-1"></i></td>
+                                                <td>47</td>
+                                                <td>test 1</td>
+                                                <td>doc 1</td>
+                                                <td>الهه</td>
+                                                <td>1401/12/15</td>
+                                                <td>
+                                                    <i class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                    <i
+                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                    <i class="fa-solid fa-plus more table-operation-icon"></i>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox">
+                                                </td>
+                                                <td><span>2</span></td>
+                                                <td><span><i
+                                                            class="fa-regular fa-down-to-bracket download-doc mt-1"></i></span>
+                                                </td>
+                                                <td><i class="fa-regular fa-eye view-doc mt-1"></i></td>
+                                                <td>49</td>
+                                                <td>test 2</td>
+                                                <td>doc 2</td>
+                                                <td>الهه</td>
+                                                <td>1401/12/15</td>
+                                                <td>
+                                                    <i class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                    <i
+                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                    <i class="fa-solid fa-plus more table-operation-icon"></i>
+                                                </td>
+                                            </tr>
+
+
+
+                                        </tbody>
+
+                                        <!-- edit client modal start -->
+                                        <div class="modal custom-modal modal-xl fade" id="edit_client" tabindex="-1"
+                                            aria-hidden="true">
+                                            <div
+                                                class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header d-flex justify-content-between">
+                                                        <span class="modal-title">ویرایش اطلاعات</span>
+                                                        <div data-bs-dismiss="modal">&times;</div>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <form action="">
+                                                                    <div class="row p-3">
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="title_client"
+                                                                                class="form-label mx-1">عنوان</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="title_client">
+                                                                        </div>
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="client_name"
+                                                                                class="form-label mx-1">نام
+                                                                                مشتری</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="client_name">
+                                                                        </div>
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="cleint_type"
+                                                                                class="form-label mx-1">نوع
+                                                                                مشتری</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="cleint_type">
+                                                                        </div>
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="client_city"
+                                                                                class="form-label mx-1">شهر</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="client_city">
+                                                                        </div>
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="client_state"
+                                                                                class="form-label mx-1">استان</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="client_state">
+                                                                        </div>
+
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="city"
+                                                                                class="form-label mx-1">شهر</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="city">
+                                                                        </div>
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="client_creation_date"
+                                                                                class="form-label mx-1">کد
+                                                                                پستی</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="client_creation_date">
+                                                                        </div>
+
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <div class="btn btn-danger text-light" data-bs-dismiss="modal">
+                                                            بستن</div>
+                                                        <div class="btn text-light" client-edit="edit">ثبت تغییرات
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- edit client modal end -->
+
+
+
+                                    </table>
+                                </div>
+                                <!-- table body start -->
+
+
+                                <!-- table footer start -->
+                                <div class="col-12 table_footer mt-2 mx-5 mx-md-0">
+                                    <div class="row">
+
+                                        <div
+                                            class="col-md-6 col-sm-12 col-12 d-flex justify-content-center justify-content-md-start align-items-center">
+                                            <div class="table_pagination">
+                                                <ul class="d-flex d-inline">
+                                                    <li class="p-2 prev">
+                                                        <ion-icon name="caret-forward-outline"></ion-icon>
+                                                    </li>
+                                                    <li class="active-page p-2">1</li>
+                                                    <li class="p-2">2</li>
+                                                    <li class="p-2">3</li>
+                                                    <li class="p-2">4</li>
+                                                    <li class="p-2">5</li>
+                                                    <li class="p-2 next">
+                                                        <ion-icon name="caret-back-outline"></ion-icon>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-end justify-content-center align-items-center">
+                                            <span class="pagination_text">
+                                                <small class="text-muted">صفحه 1 از 5</small>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- table footer end -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 project">
+
+                <div class="col-12 px-3 py-2">
+                    <div class="row">
+
+                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 py-2 mx-auto">
+                            <div class="card p-4 pb-0 " style="overflow-x: auto;">
+
+                                <div class="row">
+
+                                    <!-- table header start -->
+                                    <div class="col-12 d-flex justify-content-start header_table px-2">
+                                        <span>فهرست پروژه ها</span>
+                                    </div>
+
+                                    <div class="col-12 my-3">
+
+                                        <div class="row">
+
+                                            <div
+                                                class="col-12 col-sm-6  d-flex justify-content-center justify-content-sm-start">
+                                                <div class="search_table">
+                                                    <span>
+                                                        <ion-icon name="search-outline"></ion-icon>
+                                                    </span>
+                                                    <input type="text" placeholder="جستجو ...">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="col-12 col-sm-6 my-3 my-sm-0 d-flex justify-content-center justify-content-sm-end">
+                                                <div class="new-project">
+                                                    <div class="btn new-project-btn" data-bs-toggle="modal"
+                                                        data-bs-target="#new_project">ثبت پروژه جدید</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- table header end -->
+
+
+                                <!-- table body start -->
+                                <div class="col-12 body_table">
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="text-muted">
+                                                <th>
+                                                    <ion-icon name="remove-outline"></ion-icon>
+                                                </th>
+                                                <th>ردیف</th>
+                                                <th>شماره</th>
+                                                <th>عنوان</th>
+                                                <th>تیم</th>
+                                                <th>تاریخ شروع</th>
+                                                <th>تاریخ ایجاد</th>
+                                                <th>عملیات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td><span>1</span></td>
+                                                <td>5</td>
+                                                <td>تست پروژه جدید</td>
+                                                <td>تیم 5</td>
+                                                <td>1401/12/15</td>
+                                                <td>1401/12/14</td>
+                                                <td>
+                                                    <i class="fa-regular fa-trash trash table-operation-icon"></i>
+                                                    <i
+                                                        class="fa-regular fa-pen-to-square edit table-operation-icon"></i>
+                                                    <i class="fa-solid fa-plus more table-operation-icon"></i>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+
+                                        <!-- new project modal start -->
+                                        <div class="modal custom-modal modal-xl fade" id="new_project" tabindex="-1"
+                                            aria-hidden="true">
+                                            <div
+                                                class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header d-flex justify-content-between">
+                                                        <span class="modal-title">ثبت پروژه جدید</span>
+                                                        <div data-bs-dismiss="modal">&times;</div>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <form action="">
+                                                                    <div class="row p-3">
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="new-project-title"
+                                                                                class="form-label mx-1">عنوان</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="new-project-title">
+                                                                        </div>
+
+                                                                        <div class="col-12 col-lg-6 col-md-6 p-2">
+                                                                            <label for="new-project-client"
+                                                                                class="form-label mx-1">مشتری</label>
+
+                                                                            <select name=""
+                                                                                id="new-project-client-select">
+                                                                                <option selected>انتخاب کنید
+                                                                                </option>
+                                                                                <option value="1">راهبرد سیستم
+                                                                                    ایساتیس</option>
+                                                                                <select>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <div class="btn btn-danger text-light" data-bs-dismiss="modal">
+                                                            بستن</div>
+                                                        <div class="btn text-light" newclient-save="save">ثبت
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- new project modal end -->
+
+
+
+                                    </table>
+                                </div>
+                                <!-- table body start -->
+
+
+                                <!-- table footer start -->
+                                <div class="col-12 table_footer mt-2 mx-5 mx-md-0">
+                                    <div class="row">
+
+                                        <div
+                                            class="col-md-6 col-sm-12 col-12 d-flex justify-content-center justify-content-md-start align-items-center">
+                                            <div class="table_pagination">
+                                                <ul class="d-flex d-inline">
+                                                    <li class="p-2 prev">
+                                                        <ion-icon name="caret-forward-outline"></ion-icon>
+                                                    </li>
+                                                    <li class="active-page p-2">1</li>
+                                                    <li class="p-2">2</li>
+                                                    <li class="p-2">3</li>
+                                                    <li class="p-2">4</li>
+                                                    <li class="p-2">5</li>
+                                                    <li class="p-2 next">
+                                                        <ion-icon name="caret-back-outline"></ion-icon>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="col-md-6 col-sm-12 col-12 d-flex justify-content-md-end justify-content-center align-items-center">
+                                            <span class="pagination_text">
+                                                <small class="text-muted">صفحه 1 از 5</small>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- table footer end -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <!-- <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 team"></div> -->
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <!-- <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 cost"></div> -->
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <!-- <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 facture"></div> -->
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <!-- <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 invoice"></div> -->
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <!-- <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 payment"></div> -->
+            <!-- content body end -->
+
+            <!-- content body start -->
+            <!-- <div class="row content-body px-4 px-sm-2 px-xl-2 px-lg-2 setting"></div> -->
+            <!-- content body end -->
+        </div>
+    </div>
+
+
+    <!-- scroll to top btn start -->
+    <div class="scroll-to-top">
+        <div class="inner text-center">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+        </div>
+    </div>
+    <!-- scroll to top btn end -->
+
+    <!-- progress container start  -->
+    <div class="progress-container"></div>
+    <!-- progress container end  -->
+
+    </div>
+    <!-- main information end -->
+
+
+
+
+    <!-- icon CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

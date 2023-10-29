@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "apexcharts": "^3.37.1",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.2.1",
+    "flatpickr": "^4.6.13",
+    "flatpickr-persian": "^4.6.4",
+    "jquery-circle-progress": "^1.2.2",
+    "js-circle-progress": "^0.2.4",
+    "ng-circle-progress": "^1.7.1",
+    "persian-datepicker": "^1.2.0",
+    "sweetalert2": "^11.7.2"
+  },
+  "name": "project1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

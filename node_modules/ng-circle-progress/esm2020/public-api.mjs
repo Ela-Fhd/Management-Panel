@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of ng-circle-progress
+ */
+export * from './lib/ng-circle-progress.component';
+export * from './lib/ng-circle-progress.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25nLWNpcmNsZS1wcm9ncmVzcy9zcmMvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRztBQUVILGNBQWMsb0NBQW9DLENBQUM7QUFDbkQsY0FBYyxpQ0FBaUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgbmctY2lyY2xlLXByb2dyZXNzXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvbmctY2lyY2xlLXByb2dyZXNzLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZy1jaXJjbGUtcHJvZ3Jlc3MubW9kdWxlJztcbiJdfQ==
