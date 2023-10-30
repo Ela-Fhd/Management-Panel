@@ -1,5 +1,3 @@
-
-
 <h1 align="center">Management Panel</h1>
 
 
