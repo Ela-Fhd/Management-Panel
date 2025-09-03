@@ -3,7 +3,6 @@
 
 ![demo](https://github.com/Ela-Fhd/Management-Panel/blob/main/img/demo.png)
 
-  - &#128204;<a href="https://elahefahmideh.ir/panel/" >Demo</a>
   - 🙋‍♀️Developed by Elahe Fahmideh
   - 📆Created : May 2023
   - &#x2714;Technologies : Html , Css , Bootstrap , javaScript , jQuery , Chart js
